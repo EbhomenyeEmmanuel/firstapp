@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <html xmlns="http:/ /www.w3.org/1999/xhtml" 
+      xmlns:th="http:/ /www.thymeleaf.org">
+  <head>
+    <title>Intro</title>
+  </head>
+  <body>       
+      <div class="option-group" id="frameworks">
+      <h3>Choose any popular Java framework :</h3>
+      <div th:each="option : ${framework}">
+        <input th.id="*{options}" type="checkbox"
+        th:value="${option.id}"/>
+          <span th:text="${option.name}">OPTION</span>
+          <br/>
+      </div>
+      </div>
+
+      <div class="option-group" id="starters">
+        <h3>Choose any starter dependency :</h3>
+        <div th:each="option : ${starter}">
+          <input th.id="*{options}" type="checkbox"
+          th:value="${option.id}"/>
+        <span th:text="${option.name}">OPTION</span>
+        <br/>
+        </div>
+      </div>
+      </div>
+
+  </body>
+ </html>
